@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F3AF14E81CBD8711001782EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF14E71CBD8711001782EA /* AppDelegate.swift */; };
-		F3AF14EA1CBD8711001782EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF14E91CBD8711001782EA /* ViewController.swift */; };
+		F3AF14EA1CBD8711001782EA /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF14E91CBD8711001782EA /* WelcomeController.swift */; };
 		F3AF14ED1CBD8711001782EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AF14EB1CBD8711001782EA /* Main.storyboard */; };
 		F3AF14EF1CBD8711001782EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AF14EE1CBD8711001782EA /* Assets.xcassets */; };
 		F3AF14F21CBD8711001782EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AF14F01CBD8711001782EA /* LaunchScreen.storyboard */; };
 		F3AF14FD1CBD8712001782EA /* Medical_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF14FC1CBD8712001782EA /* Medical_AppTests.swift */; };
+		F3AF15081CBD9AD0001782EA /* User_Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3AF15071CBD9AD0001782EA /* User_Info.plist */; };
+		F3AF150A1CBDAB43001782EA /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF15091CBDAB43001782EA /* Plist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		F3AF14E41CBD8711001782EA /* Medical_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medical_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AF14E71CBD8711001782EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3AF14E91CBD8711001782EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3AF14E91CBD8711001782EA /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		F3AF14EC1CBD8711001782EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3AF14EE1CBD8711001782EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3AF14F11CBD8711001782EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		F3AF14F81CBD8712001782EA /* Medical_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medical_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AF14FC1CBD8712001782EA /* Medical_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medical_AppTests.swift; sourceTree = "<group>"; };
 		F3AF14FE1CBD8712001782EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3AF15071CBD9AD0001782EA /* User_Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = User_Info.plist; sourceTree = "<group>"; };
+		F3AF15091CBDAB43001782EA /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				F3AF14E71CBD8711001782EA /* AppDelegate.swift */,
-				F3AF14E91CBD8711001782EA /* ViewController.swift */,
+				F3AF14E91CBD8711001782EA /* WelcomeController.swift */,
+				F3AF15091CBDAB43001782EA /* Plist.swift */,
 				F3AF14EB1CBD8711001782EA /* Main.storyboard */,
+				F3AF15071CBD9AD0001782EA /* User_Info.plist */,
 				F3AF14EE1CBD8711001782EA /* Assets.xcassets */,
 				F3AF14F01CBD8711001782EA /* LaunchScreen.storyboard */,
 				F3AF14F31CBD8711001782EA /* Info.plist */,
@@ -180,6 +186,7 @@
 				F3AF14F21CBD8711001782EA /* LaunchScreen.storyboard in Resources */,
 				F3AF14EF1CBD8711001782EA /* Assets.xcassets in Resources */,
 				F3AF14ED1CBD8711001782EA /* Main.storyboard in Resources */,
+				F3AF15081CBD9AD0001782EA /* User_Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3AF14EA1CBD8711001782EA /* ViewController.swift in Sources */,
+				F3AF150A1CBDAB43001782EA /* Plist.swift in Sources */,
+				F3AF14EA1CBD8711001782EA /* WelcomeController.swift in Sources */,
 				F3AF14E81CBD8711001782EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
