@@ -14,11 +14,14 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var l_welcome: UILabel!
     @IBOutlet weak var l_placeHolder: UILabel!
     @IBOutlet weak var i_textInput: UITextField!
+    @IBOutlet weak var b_back: UIButton!
+    @IBOutlet weak var b_done: UIButton!
     
     let NameKey = "Name"
     let BirthdayKey = "Birthday"
-    var nameID: AnyObject = "name"
-    var birthday:NSDate = NSDate()
+    
+    let cornRad:CGFloat = 25        //Corner radius for the buttons in the view
+    var inputCount:Int = 0
     
     override func viewDidLoad()
     {
@@ -53,14 +56,20 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     override func viewWillAppear(animated: Bool)
     {
         self.l_welcome.center.x -= self.view.bounds.width
+        
         self.i_textInput.alpha = 0
+        
+        self.b_back.layer.cornerRadius = self.cornRad
+        self.b_done.layer.cornerRadius = self.cornRad
+        self.b_back.alpha = 0
+        self.b_done.alpha = 0
     }
     
     
     //Moves in the welcome label
     func moveInWelcome() -> Void
     {
-        UIView.animateWithDuration(0.75,
+        UIView.animateWithDuration(1,
            delay: 0.0,
            options: .CurveEaseIn,
            animations: {
@@ -80,30 +89,15 @@ class WelcomeController: UIViewController, UITextFieldDelegate
                 self.l_welcome.alpha = 0
             },
             completion: { finished in
-                self.l_welcome.text = "Let's gather some information"
+                self.l_welcome.text = "Let's gather information"
+                self.l_welcome.font = UIFont(name: self.l_welcome.font.fontName, size: 30)
                 self.fadeInGatherInfo()
             })
     }
     
-    func fadeOutGatherInfo() -> Void
-    {
-        UIView.animateWithDuration(0.5,
-            delay: 0.0,
-            options: .CurveEaseIn,
-            animations: {
-                self.l_welcome.alpha = 0
-            },
-            completion: { finished in
-                self.l_welcome.text = "Name"
-                self.fadeInName()
-            })
-    }
-    
-    //Fades in the label
-    //Uses cound to determine the step in the animation to do
     func fadeInGatherInfo() -> Void
     {
-        UIView.animateWithDuration(0.5,
+        UIView.animateWithDuration(1,
             delay: 0.0,
             options: .CurveEaseIn,
             animations: {
@@ -114,7 +108,22 @@ class WelcomeController: UIViewController, UITextFieldDelegate
                 self.fadeOutGatherInfo()
             })
     }
-
+    
+    func fadeOutGatherInfo() -> Void
+    {
+        UIView.animateWithDuration(0.5,
+            delay: 0.25,
+            options: .CurveEaseIn,
+            animations: {
+                self.l_welcome.alpha = 0
+            },
+            completion: { finished in
+                self.l_welcome.text = "Name"
+                self.l_welcome.font = UIFont(name: self.l_welcome.font.fontName, size: 36)
+                self.fadeInName()
+            })
+    }
+    
     func fadeInName() -> Void
     {
         UIView.animateWithDuration(0.5,
@@ -122,6 +131,8 @@ class WelcomeController: UIViewController, UITextFieldDelegate
             options: .CurveEaseIn,
             animations: {
                 self.l_welcome.alpha = 1
+                self.b_back.alpha = 1
+                self.b_done.alpha = 1
                 
                 self.l_welcome.translatesAutoresizingMaskIntoConstraints = true
                 var nextFrame = self.l_welcome.frame
@@ -138,7 +149,7 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        
+        /*
         if(g_plist != nil)
         {
             let dict = g_plist!.getMutablePlistFile()!
@@ -153,8 +164,7 @@ class WelcomeController: UIViewController, UITextFieldDelegate
             print(g_plist!.getValuesInPlistFile())
             
         }
-        
-        
+        */
         return false
     }
     

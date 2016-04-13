@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV7-kZ-4R6" userLabel="Welcome">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV7-kZ-4R6" userLabel="Welcome">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="100" id="JpW-PK-Nwb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -85,15 +85,67 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-qC-bmW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.2274509804" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eze-3R-5Yg"/>
+                                    <constraint firstAttribute="width" constant="100" id="pDb-2g-q2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pDb-2g-q2d"/>
+                                        <exclude reference="eze-3R-5Yg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="pDb-2g-q2d"/>
+                                        <include reference="eze-3R-5Yg"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iua-3L-PBq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.22745098039215686" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="79A-lA-CzP"/>
+                                    <constraint firstAttribute="height" constant="50" id="brd-qQ-Ybb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="79A-lA-CzP"/>
+                                        <exclude reference="brd-qQ-Ybb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="79A-lA-CzP"/>
+                                        <include reference="brd-qQ-Ybb"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.52941176470588236" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ksw-h8-dGx" secondAttribute="bottom" constant="250" id="7Mg-Hb-Yjg"/>
+                            <constraint firstItem="iua-3L-PBq" firstAttribute="top" secondItem="Ksw-h8-dGx" secondAttribute="bottom" constant="100" id="7ms-Cs-Nsr"/>
                             <constraint firstItem="tV7-kZ-4R6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lqc-G0-3gU"/>
                             <constraint firstItem="KnV-Tg-P9S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="MBc-GF-H2d"/>
+                            <constraint firstItem="Ksw-h8-dGx" firstAttribute="leading" secondItem="iua-3L-PBq" secondAttribute="trailing" constant="-100" id="Tel-mR-EcX"/>
                             <constraint firstItem="tV7-kZ-4R6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjb-yW-GqD"/>
+                            <constraint firstItem="Clc-qC-bmW" firstAttribute="leading" secondItem="Ksw-h8-dGx" secondAttribute="trailing" constant="-100" id="bwi-oM-neM"/>
                             <constraint firstItem="Ksw-h8-dGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tkl-p9-fgF"/>
+                            <constraint firstItem="Clc-qC-bmW" firstAttribute="top" secondItem="Ksw-h8-dGx" secondAttribute="bottom" constant="100" id="usz-PU-GDY"/>
                             <constraint firstItem="KnV-Tg-P9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xzc-zx-wSL"/>
                         </constraints>
                         <variation key="default">
@@ -101,13 +153,19 @@
                                 <exclude reference="tV7-kZ-4R6"/>
                                 <exclude reference="KnV-Tg-P9S"/>
                                 <exclude reference="Ksw-h8-dGx"/>
+                                <exclude reference="Clc-qC-bmW"/>
+                                <exclude reference="iua-3L-PBq"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MBc-GF-H2d"/>
                                 <exclude reference="xzc-zx-wSL"/>
-                                <exclude reference="tkl-p9-fgF"/>
                                 <exclude reference="Lqc-G0-3gU"/>
                                 <exclude reference="Vjb-yW-GqD"/>
+                                <exclude reference="Tel-mR-EcX"/>
+                                <exclude reference="tkl-p9-fgF"/>
+                                <exclude reference="7ms-Cs-Nsr"/>
+                                <exclude reference="bwi-oM-neM"/>
+                                <exclude reference="usz-PU-GDY"/>
                                 <exclude reference="7Mg-Hb-Yjg"/>
                             </mask>
                         </variation>
@@ -116,18 +174,26 @@
                                 <include reference="tV7-kZ-4R6"/>
                                 <include reference="KnV-Tg-P9S"/>
                                 <include reference="Ksw-h8-dGx"/>
+                                <include reference="Clc-qC-bmW"/>
+                                <include reference="iua-3L-PBq"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="MBc-GF-H2d"/>
                                 <include reference="xzc-zx-wSL"/>
-                                <include reference="tkl-p9-fgF"/>
                                 <include reference="Lqc-G0-3gU"/>
                                 <include reference="Vjb-yW-GqD"/>
+                                <include reference="Tel-mR-EcX"/>
+                                <include reference="tkl-p9-fgF"/>
+                                <include reference="7ms-Cs-Nsr"/>
+                                <include reference="bwi-oM-neM"/>
+                                <include reference="usz-PU-GDY"/>
                                 <include reference="7Mg-Hb-Yjg"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="b_back" destination="iua-3L-PBq" id="MFf-ny-f36"/>
+                        <outlet property="b_done" destination="Clc-qC-bmW" id="pmd-3f-feL"/>
                         <outlet property="i_textInput" destination="Ksw-h8-dGx" id="XmC-xY-aaU"/>
                         <outlet property="l_placeHolder" destination="KnV-Tg-P9S" id="v3c-qI-4kG"/>
                         <outlet property="l_welcome" destination="tV7-kZ-4R6" id="lQf-Lj-cne"/>
