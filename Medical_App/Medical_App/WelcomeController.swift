@@ -8,9 +8,12 @@
 
 import UIKit
 
-class WelcomeController: UIViewController {
+class WelcomeController: UIViewController, UITextFieldDelegate
+{
 
     @IBOutlet weak var l_welcome: UILabel!
+    @IBOutlet weak var l_placeHolder: UILabel!
+    @IBOutlet weak var i_textInput: UITextField!
     
     let NameKey = "Name"
     let BirthdayKey = "Birthday"
@@ -20,6 +23,8 @@ class WelcomeController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.i_textInput.delegate = self
         
         moveInWelcome()
         
@@ -45,8 +50,10 @@ class WelcomeController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool)
+    {
         self.l_welcome.center.x -= self.view.bounds.width
+        self.i_textInput.alpha = 0
     }
     
     
@@ -60,12 +67,11 @@ class WelcomeController: UIViewController {
                 self.l_welcome.center.x += self.view.bounds.width
             },
            completion: { finished in
-            self.fadeOut(self.l_welcome, time: 1.0)
+            self.fadeOutWelcome()
         })
     }
-    
-    //Fades out the inputted UIView object over time
-    func fadeOut(object:UIView, time:Double) -> Void
+
+    func fadeOutWelcome() -> Void
     {
         UIView.animateWithDuration(0.5,
             delay: 0.0,
@@ -74,15 +80,91 @@ class WelcomeController: UIViewController {
                 self.l_welcome.alpha = 0
             },
             completion: { finished in
-                print("Faded out")
-        })
+                self.l_welcome.text = "Let's gather some information"
+                self.fadeInGatherInfo()
+            })
     }
+    
+    func fadeOutGatherInfo() -> Void
+    {
+        UIView.animateWithDuration(0.5,
+            delay: 0.0,
+            options: .CurveEaseIn,
+            animations: {
+                self.l_welcome.alpha = 0
+            },
+            completion: { finished in
+                self.l_welcome.text = "Name"
+                self.fadeInName()
+            })
+    }
+    
+    //Fades in the label
+    //Uses cound to determine the step in the animation to do
+    func fadeInGatherInfo() -> Void
+    {
+        UIView.animateWithDuration(0.5,
+            delay: 0.0,
+            options: .CurveEaseIn,
+            animations: {
+                self.l_welcome.alpha = 1
+            },
+            completion: { finished in
+                print("Done")
+                self.fadeOutGatherInfo()
+            })
+    }
+
+    func fadeInName() -> Void
+    {
+        UIView.animateWithDuration(0.5,
+            delay: 0.0,
+            options: .CurveEaseIn,
+            animations: {
+                self.l_welcome.alpha = 1
+                
+                self.l_welcome.translatesAutoresizingMaskIntoConstraints = true
+                var nextFrame = self.l_welcome.frame
+                nextFrame.origin.y = self.l_placeHolder.frame.origin.y
+                self.l_welcome.frame = nextFrame
+                
+                self.i_textInput.alpha = 1
+            },
+            completion: { finished in
+                print(g_plist!.getValuesInPlistFile())
+                print("Done moving and fading")
+            })
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        
+        if(g_plist != nil)
+        {
+            let dict = g_plist!.getMutablePlistFile()!
+            dict[NameKey] = textField.text
+            
+            do {
+                try g_plist?.addValuesToPlistFile(dict)
+            } catch {
+                print(error)
+            }
+            
+            print(g_plist!.getValuesInPlistFile())
+            
+        }
+        
+        
+        return false
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
     
 
-}
+
 

@@ -81,5 +81,6 @@ struct Plist {
             throw PlistError.FileDoesNotExist
         }
     }
-    
 }
+
+let g_plist = Plist(name: "User_Info")

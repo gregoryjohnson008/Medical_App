@@ -17,13 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV7-kZ-4R6" userLabel="Welcome">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV7-kZ-4R6" userLabel="Welcome">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="1jd-eQ-wLl"/>
                                     <constraint firstAttribute="height" constant="100" id="JpW-PK-Nwb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -39,39 +42,100 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnV-Tg-P9S" userLabel="PlaceHolder">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="44O-yE-svG"/>
+                                    <constraint firstAttribute="height" constant="100" id="Px0-2s-Hab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="44O-yE-svG"/>
+                                        <exclude reference="Px0-2s-Hab"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="44O-yE-svG"/>
+                                        <include reference="Px0-2s-Hab"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ksw-h8-dGx" userLabel="InputField">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PYW-mh-nIL"/>
+                                    <constraint firstAttribute="width" constant="300" id="nAg-rW-zbH" userLabel="width = 350"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PYW-mh-nIL"/>
+                                        <exclude reference="nAg-rW-zbH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="PYW-mh-nIL"/>
+                                        <include reference="nAg-rW-zbH"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.52941176470588236" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ksw-h8-dGx" secondAttribute="bottom" constant="250" id="7Mg-Hb-Yjg"/>
                             <constraint firstItem="tV7-kZ-4R6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lqc-G0-3gU"/>
+                            <constraint firstItem="KnV-Tg-P9S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="MBc-GF-H2d"/>
                             <constraint firstItem="tV7-kZ-4R6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjb-yW-GqD"/>
+                            <constraint firstItem="Ksw-h8-dGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tkl-p9-fgF"/>
+                            <constraint firstItem="KnV-Tg-P9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xzc-zx-wSL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="tV7-kZ-4R6"/>
+                                <exclude reference="KnV-Tg-P9S"/>
+                                <exclude reference="Ksw-h8-dGx"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="MBc-GF-H2d"/>
+                                <exclude reference="xzc-zx-wSL"/>
+                                <exclude reference="tkl-p9-fgF"/>
                                 <exclude reference="Lqc-G0-3gU"/>
                                 <exclude reference="Vjb-yW-GqD"/>
+                                <exclude reference="7Mg-Hb-Yjg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="tV7-kZ-4R6"/>
+                                <include reference="KnV-Tg-P9S"/>
+                                <include reference="Ksw-h8-dGx"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="MBc-GF-H2d"/>
+                                <include reference="xzc-zx-wSL"/>
+                                <include reference="tkl-p9-fgF"/>
                                 <include reference="Lqc-G0-3gU"/>
                                 <include reference="Vjb-yW-GqD"/>
+                                <include reference="7Mg-Hb-Yjg"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="i_textInput" destination="Ksw-h8-dGx" id="XmC-xY-aaU"/>
+                        <outlet property="l_placeHolder" destination="KnV-Tg-P9S" id="v3c-qI-4kG"/>
                         <outlet property="l_welcome" destination="tV7-kZ-4R6" id="lQf-Lj-cne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="489"/>
+            <point key="canvasLocation" x="296" y="497.25"/>
         </scene>
     </scenes>
 </document>
