@@ -108,6 +108,9 @@
                                         <include reference="eze-3R-5Yg"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="doneClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5Y-kh-rbN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iua-3L-PBq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -132,6 +135,9 @@
                                         <include reference="brd-qQ-Ybb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="backClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbr-Rk-GWV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.52941176470588236" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>

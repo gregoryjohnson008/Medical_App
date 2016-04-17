@@ -89,7 +89,7 @@ class WelcomeController: UIViewController, UITextFieldDelegate
                 self.l_welcome.alpha = 0
             },
             completion: { finished in
-                self.l_welcome.text = "Let's gather information"
+                self.l_welcome.text = "Let's gather some information"
                 self.l_welcome.font = UIFont(name: self.l_welcome.font.fontName, size: 30)
                 self.fadeInGatherInfo()
             })
@@ -118,7 +118,7 @@ class WelcomeController: UIViewController, UITextFieldDelegate
                 self.l_welcome.alpha = 0
             },
             completion: { finished in
-                self.l_welcome.text = "Name"
+                self.l_welcome.text = "Full Name"
                 self.l_welcome.font = UIFont(name: self.l_welcome.font.fontName, size: 36)
                 self.fadeInName()
             })
@@ -149,23 +149,29 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        /*
-        if(g_plist != nil)
-        {
-            let dict = g_plist!.getMutablePlistFile()!
-            dict[NameKey] = textField.text
-            
-            do {
-                try g_plist?.addValuesToPlistFile(dict)
-            } catch {
-                print(error)
-            }
-            
-            print(g_plist!.getValuesInPlistFile())
-            
-        }
-        */
         return false
+    }
+    
+    //Done button is clicked
+    @IBAction func doneClicked(sender: AnyObject)
+    {
+         if(g_plist != nil)
+         {
+             let dict = g_plist!.getMutablePlistFile()!
+             dict[NameKey] = self.i_textInput.text
+         
+         do {
+            try g_plist?.addValuesToPlistFile(dict)
+         } catch {
+            print(error)
+         }
+            print(g_plist!.getValuesInPlistFile())
+         }
+    }
+    
+    //Back clicked
+    @IBAction func backClicked(sender: AnyObject)
+    {
     }
     
 
