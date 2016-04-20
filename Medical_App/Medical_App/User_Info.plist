@@ -4,7 +4,11 @@
 <dict>
 	<key>Birthday</key>
 	<date>2016-04-12T21:25:59Z</date>
-	<key>Name</key>
-	<string>name</string>
+	<key>Last Name</key>
+	<string>last name</string>
+	<key>Middle Name</key>
+	<string>middle name</string>
+	<key>First Name</key>
+	<string>first name</string>
 </dict>
 </plist>

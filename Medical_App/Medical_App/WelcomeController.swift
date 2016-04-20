@@ -13,11 +13,18 @@ class WelcomeController: UIViewController, UITextFieldDelegate
 
     @IBOutlet weak var l_welcome: UILabel!
     @IBOutlet weak var l_placeHolder: UILabel!
-    @IBOutlet weak var i_textInput: UITextField!
+    @IBOutlet weak var i_textInput1: UITextField!
+    @IBOutlet weak var i_textInput2: UITextField!
+    @IBOutlet weak var i_textInput3: UITextField!
+    @IBOutlet weak var l_title1: UILabel!
+    @IBOutlet weak var l_title2: UILabel!
+    @IBOutlet weak var l_title3: UILabel!
     @IBOutlet weak var b_back: UIButton!
     @IBOutlet weak var b_done: UIButton!
     
-    let NameKey = "Name"
+    let FirstNameKey = "First Name"
+    let MiddleInitialKey = "Middle Name"
+    let LastNameKey = "Last Name"
     let BirthdayKey = "Birthday"
     
     let cornRad:CGFloat = 25        //Corner radius for the buttons in the view
@@ -27,7 +34,9 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     {
         super.viewDidLoad()
         
-        self.i_textInput.delegate = self
+        self.i_textInput1.delegate = self
+        self.i_textInput2.delegate = self
+        self.i_textInput3.delegate = self
         
         moveInWelcome()
         
@@ -57,7 +66,12 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     {
         self.l_welcome.center.x -= self.view.bounds.width
         
-        self.i_textInput.alpha = 0
+        self.i_textInput1.alpha = 0
+        self.i_textInput2.alpha = 0
+        self.i_textInput3.alpha = 0
+        self.l_title1.alpha = 0
+        self.l_title2.alpha = 0
+        self.l_title3.alpha = 0
         
         self.b_back.layer.cornerRadius = self.cornRad
         self.b_done.layer.cornerRadius = self.cornRad
@@ -139,7 +153,12 @@ class WelcomeController: UIViewController, UITextFieldDelegate
                 nextFrame.origin.y = self.l_placeHolder.frame.origin.y
                 self.l_welcome.frame = nextFrame
                 
-                self.i_textInput.alpha = 1
+                self.i_textInput1.alpha = 1
+                self.i_textInput2.alpha = 1
+                self.i_textInput3.alpha = 1
+                self.l_title1.alpha = 1
+                self.l_title2.alpha = 1
+                self.l_title3.alpha = 1
             },
             completion: { finished in
                 print(g_plist!.getValuesInPlistFile())
@@ -157,8 +176,10 @@ class WelcomeController: UIViewController, UITextFieldDelegate
     {
          if(g_plist != nil)
          {
-             let dict = g_plist!.getMutablePlistFile()!
-             dict[NameKey] = self.i_textInput.text
+            let dict = g_plist!.getMutablePlistFile()!
+            dict[FirstNameKey] = self.i_textInput1.text
+            dict[MiddleInitialKey] = self.i_textInput2.text
+            dict[LastNameKey] = self.i_textInput3.text
          
          do {
             try g_plist?.addValuesToPlistFile(dict)
