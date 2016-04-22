@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Welcome Controller-->
@@ -70,7 +71,7 @@
                                     <constraint firstAttribute="height" constant="40" id="PYW-mh-nIL"/>
                                     <constraint firstAttribute="width" constant="200" id="nAg-rW-zbH" userLabel="width = 350"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -91,7 +92,7 @@
                                     <constraint firstAttribute="width" constant="200" id="Abb-9w-AKb" userLabel="width = 350"/>
                                     <constraint firstAttribute="height" constant="40" id="ZZX-AR-1d5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -112,7 +113,7 @@
                                     <constraint firstAttribute="width" constant="200" id="uPV-SA-iTI" userLabel="width = 350"/>
                                     <constraint firstAttribute="height" constant="40" id="wLa-W1-9qp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -247,6 +248,26 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LUD-bZ-5fa">
+                                <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fum-OK-MP7"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="483040597.98590899">
+                                    <!--2016-04-22 17:56:37 +0000-->
+                                </date>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fum-OK-MP7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="fum-OK-MP7"/>
+                                    </mask>
+                                </variation>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.52941176470588236" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -254,10 +275,13 @@
                             <constraint firstItem="4W1-68-aCF" firstAttribute="top" secondItem="3GP-Zk-DQh" secondAttribute="bottom" constant="8" id="18C-ah-1HR"/>
                             <constraint firstItem="p8E-2g-Cbm" firstAttribute="centerX" secondItem="GMg-CO-bcC" secondAttribute="centerX" id="2FY-vD-7Br"/>
                             <constraint firstItem="Ksw-h8-dGx" firstAttribute="top" secondItem="4W1-68-aCF" secondAttribute="bottom" constant="70" id="5Wm-OE-YQ6"/>
+                            <constraint firstItem="LUD-bZ-5fa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="5nv-gd-ig5"/>
                             <constraint firstItem="iua-3L-PBq" firstAttribute="top" secondItem="Ksw-h8-dGx" secondAttribute="bottom" constant="120" id="7ms-Cs-Nsr"/>
                             <constraint firstItem="Ksw-h8-dGx" firstAttribute="top" secondItem="DTW-E2-ei8" secondAttribute="bottom" constant="8" id="K1h-gx-COi"/>
+                            <constraint firstItem="LUD-bZ-5fa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L8N-lN-ZVW"/>
                             <constraint firstItem="GMg-CO-bcC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LsY-eo-9yd"/>
                             <constraint firstItem="KnV-Tg-P9S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="MBc-GF-H2d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LUD-bZ-5fa" secondAttribute="trailing" constant="5" id="SBh-GD-gTk"/>
                             <constraint firstItem="4W1-68-aCF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vbh-nB-4UJ"/>
                             <constraint firstItem="3GP-Zk-DQh" firstAttribute="centerX" secondItem="4W1-68-aCF" secondAttribute="centerX" id="Vc4-SO-ME4"/>
                             <constraint firstItem="tV7-kZ-4R6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjb-yW-GqD"/>
@@ -266,6 +290,7 @@
                             <constraint firstItem="Clc-qC-bmW" firstAttribute="leading" secondItem="Ksw-h8-dGx" secondAttribute="trailing" constant="-50" id="ZUt-br-xg0"/>
                             <constraint firstItem="GMg-CO-bcC" firstAttribute="top" secondItem="p8E-2g-Cbm" secondAttribute="bottom" constant="8" id="cBh-3E-ldO"/>
                             <constraint firstItem="4W1-68-aCF" firstAttribute="top" secondItem="GMg-CO-bcC" secondAttribute="bottom" constant="70" id="e3u-0m-YJ4"/>
+                            <constraint firstItem="LUD-bZ-5fa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oy4-KB-BGm"/>
                             <constraint firstItem="4W1-68-aCF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sdk-gx-svp"/>
                             <constraint firstItem="Ksw-h8-dGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tkl-p9-fgF"/>
                             <constraint firstItem="Clc-qC-bmW" firstAttribute="top" secondItem="Ksw-h8-dGx" secondAttribute="bottom" constant="120" id="usz-PU-GDY"/>
@@ -284,10 +309,15 @@
                                 <exclude reference="p8E-2g-Cbm"/>
                                 <exclude reference="3GP-Zk-DQh"/>
                                 <exclude reference="DTW-E2-ei8"/>
+                                <exclude reference="LUD-bZ-5fa"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MBc-GF-H2d"/>
                                 <exclude reference="xzc-zx-wSL"/>
+                                <exclude reference="5nv-gd-ig5"/>
+                                <exclude reference="L8N-lN-ZVW"/>
+                                <exclude reference="SBh-GD-gTk"/>
+                                <exclude reference="oy4-KB-BGm"/>
                                 <exclude reference="LsY-eo-9yd"/>
                                 <exclude reference="cBh-3E-ldO"/>
                                 <exclude reference="2FY-vD-7Br"/>
@@ -320,10 +350,15 @@
                                 <include reference="p8E-2g-Cbm"/>
                                 <include reference="3GP-Zk-DQh"/>
                                 <include reference="DTW-E2-ei8"/>
+                                <include reference="LUD-bZ-5fa"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="MBc-GF-H2d"/>
                                 <include reference="xzc-zx-wSL"/>
+                                <include reference="5nv-gd-ig5"/>
+                                <include reference="L8N-lN-ZVW"/>
+                                <include reference="SBh-GD-gTk"/>
+                                <include reference="oy4-KB-BGm"/>
                                 <include reference="LsY-eo-9yd"/>
                                 <include reference="cBh-3E-ldO"/>
                                 <include reference="2FY-vD-7Br"/>
@@ -356,11 +391,12 @@
                         <outlet property="l_title2" destination="3GP-Zk-DQh" id="xx8-2k-vQW"/>
                         <outlet property="l_title3" destination="DTW-E2-ei8" id="N1w-Pl-4Fd"/>
                         <outlet property="l_welcome" destination="tV7-kZ-4R6" id="lQf-Lj-cne"/>
+                        <outlet property="p_datePicker" destination="LUD-bZ-5fa" id="cq3-Iy-UZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="497.25"/>
+            <point key="canvasLocation" x="-38" y="483.75"/>
         </scene>
     </scenes>
 </document>

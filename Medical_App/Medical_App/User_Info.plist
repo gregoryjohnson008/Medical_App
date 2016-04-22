@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Birthday</key>
-	<date>2016-04-12T21:25:59Z</date>
+	<key>Birth Year</key>
+	<integer>1900</integer>
+	<key>Birth Day</key>
+	<integer>1</integer>
+	<key>Birth Month</key>
+	<integer>1</integer>
 	<key>Last Name</key>
 	<string>last name</string>
 	<key>Middle Name</key>
