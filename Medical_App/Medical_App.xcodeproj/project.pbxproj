@@ -15,6 +15,7 @@
 		F3AF14FD1CBD8712001782EA /* Medical_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF14FC1CBD8712001782EA /* Medical_AppTests.swift */; };
 		F3AF15081CBD9AD0001782EA /* User_Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3AF15071CBD9AD0001782EA /* User_Info.plist */; };
 		F3AF150A1CBDAB43001782EA /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF15091CBDAB43001782EA /* Plist.swift */; };
+		F3C363901D2F04E900F2A131 /* DecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3638F1D2F04E900F2A131 /* DecisionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		F3AF14FE1CBD8712001782EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AF15071CBD9AD0001782EA /* User_Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = User_Info.plist; sourceTree = "<group>"; };
 		F3AF15091CBDAB43001782EA /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		F3C3638F1D2F04E900F2A131 /* DecisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				F3AF14EE1CBD8711001782EA /* Assets.xcassets */,
 				F3AF14F01CBD8711001782EA /* LaunchScreen.storyboard */,
 				F3AF14F31CBD8711001782EA /* Info.plist */,
+				F3C3638F1D2F04E900F2A131 /* DecisionViewController.swift */,
 			);
 			path = Medical_App;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				TargetAttributes = {
 					F3AF14E31CBD8711001782EA = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YLS7UR355F;
 					};
 					F3AF14F71CBD8712001782EA = {
 						CreatedOnToolsVersion = 7.3;
@@ -204,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C363901D2F04E900F2A131 /* DecisionViewController.swift in Sources */,
 				F3AF150A1CBDAB43001782EA /* Plist.swift in Sources */,
 				F3AF14EA1CBD8711001782EA /* WelcomeController.swift in Sources */,
 				F3AF14E81CBD8711001782EA /* AppDelegate.swift in Sources */,
@@ -335,10 +340,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Medical_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GAJ.Medical-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,10 +354,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Medical_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GAJ.Medical-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -396,6 +407,7 @@
 				F3AF15031CBD8712001782EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3AF15041CBD8712001782EA /* Build configuration list for PBXNativeTarget "Medical_AppTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +416,7 @@
 				F3AF15061CBD8712001782EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
